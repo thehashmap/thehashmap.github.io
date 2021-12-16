@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #f76cc0;
+  --dark-pink: #f53787;
+  --blue: #0077b5;
+  --dark-blue: #002333;
+  --gray: rgb(170, 170, 170);
+  --dark-gray: #181a1b;
+  --text-color: #fff;
+  --lighter-text: rgb(219, 219, 219);
+  --card-background: #2e3031;
+  --skills-span: rgb(200, 200, 200);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--dark-gray);
+}
