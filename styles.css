@@ -8,6 +8,7 @@
 }
 
 :root {
+  --red: #db4437;
   --pink: #f76cc0;
   --dark-pink: #f53787;
   --blue: #0077b5;
@@ -165,8 +166,7 @@ input:checked + .slider:before {
 .home {
   display: flex;
   justify-content: space-around;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px;
   padding: 50px;
 }
 
@@ -214,7 +214,7 @@ input:checked + .slider:before {
 
 .home .home-btns .resume {
   color: var(--text-color);
-  border: 2px solid var(--dark-pink);
+  border: 3px solid var(--dark-pink);
 }
 
 .home .home-btns .resume:hover {
@@ -224,7 +224,7 @@ input:checked + .slider:before {
 
 .home .home-btns .projects-btn {
   color: #fff;
-  border: 2px solid var(--blue);
+  border: 3px solid var(--blue);
 }
 
 .home .home-btns .projects-btn:hover {
@@ -237,6 +237,53 @@ input:checked + .slider:before {
   height: 250px;
   border: 15px solid var(--card-background);
   border-radius: 100%;
+}
+
+.socials {
+  z-index: 100;
+  top: 65%;
+  position: absolute;
+  left: -8.5rem;
+  -webkit-animation: social-links 0.5s;
+  animation: social-links 0.5s;
+}
+
+.socials ul {
+  list-style: none;
+}
+
+.socials ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  display: block;
+  width: 200px;
+  text-align: right;
+  font-weight: bold;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.socials ul li a i {
+  padding-left: 1.5rem;
+}
+
+.socials ul li .linkedin {
+  background: var(--blue);
+}
+
+.socials ul li .github {
+  background: #2e3031;
+}
+
+.socials ul li .email {
+  background: var(--red);
+}
+
+.socials ul li a:hover {
+  -webkit-transform: translate(120px, 0);
+  transform: translate(120px, 0);
 }
 
 .about .container-about {
@@ -268,6 +315,10 @@ h2::after {
   background: var(--dark-pink);
 }
 
+.about {
+  margin: 100px;
+}
+
 .about .container-about .about-me p {
   font-size: 1rem;
   margin: 0 auto;
@@ -285,6 +336,7 @@ h2::after {
   text-align: left;
   margin-bottom: 8vw;
   scroll-margin-top: 14vw;
+  margin: 100px;
 }
 
 h4 {
@@ -330,4 +382,44 @@ img {
   visibility: visible;
   transform: translateY(20px);
   transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 700px) {
+  .home {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 20.8vw);
+  }
+}
+
+.projects-container {
+  overflow: initial;
+}
+
+.projects-content {
+  padding-right: 0 1.5rem;
+}
+
+.project-img {
+  width: 265px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.project-title {
+  font-size: 20px;
+  margin-bottom: 0 0.75rem;
+}
+
+.project-description {
+  margin-bottom: 0 0.75rem;
+}
+
+.project-data {
+  color: white;
 }
