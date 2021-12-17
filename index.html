@@ -23,8 +23,39 @@
 </head>
 <body>
     <header>
-        <nav>
-            
+        <nav id="nav" aria-label="Main menu">
+            <div class="logo">
+              <h3>Nikhil</h3>
+            </div>
+    
+            <ul class="links">
+              <li>
+                <a href="#home" class="link">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="link">About</a>
+              </li>
+              <li>
+                <a href="#skills" class="link">Skills</a>
+              </li>
+              <li>
+                <a href="#projects" class="link">Projects</a>
+              </li>
+    
+              <!-- DARK MODE TOGGLE -->
+              <div class="color-toggle-container">
+                <input type="checkbox" id="color-toggle-input" />
+                <label for="color-toggle-input" class="color-toggle-label">
+                  <div class="color-toggle"></div>
+                </label>
+              </div>
+            </ul>
+    
+            <div class="hamburger-menu" id="hamburger-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
         </nav>
     </header>
 
@@ -42,8 +73,8 @@
 
     <section class="about" id="about">
         <div class="container-about">
+          <h2><span>About</span> Me</h2>
           <div class="about-me" id="about-me">
-            <h2><span>About</span> Me</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa harum aliquid earum perspiciatis corporis est, soluta doloribus incidunt ad officia pariatur. Consectetur voluptas sit nemo dolor nam, quas beatae?
             </p>
@@ -52,15 +83,90 @@
     </section>
 
     <section class="skills" id="skills">
-
+        <h2>Skills</h2>
+        <div class="frontend">
+            <h4>frontend</h4>
+            <div class="icons">
+                <div class="card">
+                    <img src="./images/skills/frontend/html5.png" alt="html5">
+                    <p>html5</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/frontend/css3.png" alt="css3">
+                    <p>css3</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/frontend/javascript.png" alt="javascript">
+                    <p>javascript</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/frontend/react.png" alt="react">
+                    <p>react</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/frontend/bootstrap.png" alt="bootstrap">
+                    <p>bootstrap</p>
+                </div>
+            </div>
+        </div>
+        <div class="backend">
+            <h4>backend</h4>
+            <div class="icons">
+                <div class="card">
+                    <img src="./images/skills/backend/nodejs.png" alt="nodejs">
+                    <p>nodejs</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/backend/express.png" alt="express">
+                    <p>express</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/backend/mongodb.png" alt="mongodb">
+                    <p>mongodb</p>
+                </div>
+            </div>
+        </div>
+        <div class="misc">
+            <h4>miscellaneous</h4>
+            <div class="icons">
+                <div class="card">
+                    <img src="./images/skills/other/c++.png" alt="c++">
+                    <p>c++</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/c.png" alt="c">
+                    <p>c</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/python.png" alt="python">
+                    <p>python</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/git.png" alt="git">
+                    <p>git</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/github.png" alt="github">
+                    <p>github</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/npm.png" alt="npm">
+                    <p>npm</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/heroku.png" alt="heroku">
+                    <p>heroku</p>
+                </div>
+                <div class="card">
+                    <img src="./images/skills/other/webpack.png" alt="webpack">
+                    <p>webpack</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="projects" id="projects">
 
     </section>
-
-    <footer>
-
-    </footer>
 </body>
 </html>
