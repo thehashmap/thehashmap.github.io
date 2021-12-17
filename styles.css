@@ -32,34 +32,24 @@ body {
 
 header {
   background: var(--dark-gray);
-  background-size: cover;
-  min-height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  animation: nav-links 0.5s;
 }
 
-header nav {
-  z-index: 100;
-  width: 100%;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
+nav {
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 6vh;
-  -webkit-animation: nav-links 0.5s;
-  animation: nav-links 0.5s;
 }
 
 header nav .logo {
   color: var(--text-color);
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 5px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 header nav .logo h3 {
@@ -67,15 +57,13 @@ header nav .logo h3 {
 }
 
 header nav .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
+  align-items: center;
   width: 50rem;
+  font-size: 1.25rem;
   max-width: 50%;
   min-width: 30%;
-  z-index: 1000;
 }
 
 header nav .links li {
@@ -117,77 +105,83 @@ header nav .hamburger-menu div {
   margin: 5px;
 }
 
-header .color-toggle-label {
-  margin: -0.2rem;
-  width: 3rem;
-  height: 1.6rem;
-  border-radius: 25px;
-  background: var(--blue);
-  position: absolute;
-  cursor: pointer;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
-header .color-toggle {
-  width: 1.2em;
-  height: 1.2em;
-  background: var(--dark-gray);
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
   position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blue);
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--dark-gray);
   border-radius: 50%;
-  top: 0.18rem;
-  left: 0.18rem;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  transition: 0.4s;
 }
 
-header .color-toggle-label::before {
-  position: absolute;
-  bottom: 0.25rem;
-  left: 0.2rem;
-  z-index: 1000;
-  font-size: 0.9rem;
+input:checked + .slider {
+  background-color: var(--blue);
 }
 
-header .color-toggle-label::after {
-  position: absolute;
-  bottom: 0.25rem;
-  right: 0.2rem;
-  z-index: 1000;
-  font-size: 0.9rem;
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--blue);
 }
 
-header #color-toggle-input {
-  display: none;
-}
-
-header #color-toggle-input:checked ~ label .color-toggle {
-  -webkit-transform: translateX(1.4rem);
-  transform: translateX(1.4rem);
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: white;
 }
 
 .main {
-  z-index: 5;
+  margin-top: 50px;
+}
+
+.home {
   display: flex;
 }
 
-.main h1,
-.main p {
+.home h1,
+.home p {
   color: var(--text-color);
 }
 
-.main h1 {
+.home h1 {
   white-space: nowrap;
   text-align: center;
   font-size: calc(1.2rem + 3.2vw);
 }
 
-.main h1 span {
+.home h1 span {
   color: var(--dark-pink);
 }
 
-.main p {
+.home p {
   color: var(--lighter-text);
   line-height: 1.6;
   font-size: calc(14px + 0.5vw);
@@ -197,12 +191,12 @@ header #color-toggle-input:checked ~ label .color-toggle {
   padding: 0.5rem;
 }
 
-.main .hero-btns {
+.home .hero-btns {
   white-space: nowrap;
   text-align: center;
 }
 
-.main .hero-btns a {
+.home .hero-btns a {
   margin: 1rem 0.5rem;
   display: inline-block;
   text-decoration: none;
@@ -215,25 +209,25 @@ header #color-toggle-input:checked ~ label .color-toggle {
   letter-spacing: 1px;
 }
 
-.main .hero-btns .about {
+.home .hero-btns .about {
   color: var(--text-color);
   border: 2px solid var(--dark-pink);
 }
 
-.main .hero-btns .about:hover {
+.home .hero-btns .about:hover {
   background: var(--dark-pink);
   -webkit-box-shadow: 0 0 0 5px #e44e5867;
   box-shadow: 0 0 0 5px #e44e5867;
   color: #fff;
 }
 
-.main .hero-btns .projects-btn {
+.home .hero-btns .projects-btn {
   color: #fff;
   border: 2px solid var(--blue);
   background: var(--blue);
 }
 
-.main .hero-btns .projects-btn:hover {
+.home .hero-btns .projects-btn:hover {
   background: transparent;
   color: var(--text-color);
 }
