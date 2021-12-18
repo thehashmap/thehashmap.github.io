@@ -39,6 +39,7 @@ header {
   width: 100%;
   padding: 15px;
   animation: nav-links 0.5s;
+  z-index: 10000;
 }
 
 nav {
@@ -194,16 +195,16 @@ input:checked + .slider:before {
   padding: 0.5rem;
 }
 
-.home .home-btns {
+.btns {
   white-space: nowrap;
   text-align: center;
 }
 
-.home .home-btns a {
+.btns a {
   margin: 1rem 0.5rem;
   display: inline-block;
   text-decoration: none;
-  padding: 10px 32px;
+  padding: 10px 20px 10px 32px;
   border-radius: 25px;
   font-size: 1rem;
   -webkit-transition: 0.3s ease;
@@ -212,22 +213,26 @@ input:checked + .slider:before {
   letter-spacing: 1px;
 }
 
-.home .home-btns .resume {
+.btns .resume,
+.btns .code {
   color: var(--text-color);
   border: 3px solid var(--dark-pink);
 }
 
-.home .home-btns .resume:hover {
+.btns .resume:hover,
+.btns .code:hover {
   background: var(--dark-pink);
   color: #fff;
 }
 
-.home .home-btns .projects-btn {
+.btns .projects-btn,
+.btns .preview {
   color: #fff;
   border: 3px solid var(--blue);
 }
 
-.home .home-btns .projects-btn:hover {
+.btns .projects-btn:hover,
+.btns .preview:hover {
   background: var(--blue);
   color: var(--text-color);
 }
@@ -286,12 +291,6 @@ input:checked + .slider:before {
   transform: translate(120px, 0);
 }
 
-.about .container-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 h2 {
   font-size: 2.5rem;
   position: relative;
@@ -315,7 +314,8 @@ h2::after {
   background: var(--dark-pink);
 }
 
-.about {
+.about .container-about {
+  display: flex;
   margin: 100px;
 }
 
@@ -398,26 +398,28 @@ img {
 }
 
 .projects-container {
-  overflow: initial;
+  max-width: 60%;
 }
 
-.projects-content {
-  padding-right: 0 1.5rem;
+.project-content {
+  display: grid;
+  justify-content: center;
+  padding: 10px 100px;
 }
 
 .project-img {
-  width: 265px;
   border-radius: 0.5rem;
-  justify-self: center;
 }
 
 .project-title {
   font-size: 20px;
-  margin-bottom: 0 0.75rem;
+  text-align: center;
+  padding-bottom: 0.75rem;
 }
 
 .project-description {
-  margin-bottom: 0 0.75rem;
+  text-align: center;
+  padding-bottom: 0.75rem;
 }
 
 .project-data {

@@ -1,4 +1,4 @@
-let swiper = new Swiper(".projects-container", {
+let swiper = new Swiper(".mySwiper", {
     cssMode: true,
     navigation: {
       nextEl: ".swiper-button-next",
