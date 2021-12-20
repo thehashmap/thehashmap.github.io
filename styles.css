@@ -40,18 +40,21 @@ body {
 
 header {
   background: var(--dark-gray);
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px;
-  animation: nav-links 0.5s;
-  z-index: 10000;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-nav {
+header nav {
+  z-index: 10000;
+  width: 100%;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  animation: nav-links 0.5s;
+  background-color: var(--dark-gray);
 }
 
 header nav .logo {
@@ -92,7 +95,6 @@ header nav .links .link::after {
   width: 0;
   height: 4px;
   background: var(--dark-pink);
-  -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
 
@@ -107,7 +109,6 @@ header nav .hamburger-menu {
 
 header nav .hamburger-menu div {
   background-color: var(--text-color);
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   width: 25px;
   height: 3px;
@@ -232,7 +233,6 @@ input:checked + .slider:before {
   padding: 10px 20px 10px 32px;
   border-radius: 25px;
   font-size: 1rem;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-weight: bold;
   letter-spacing: 1px;
@@ -267,7 +267,6 @@ input:checked + .slider:before {
   top: 65%;
   position: absolute;
   left: -8.5rem;
-  -webkit-animation: social-links 0.5s;
   animation: social-links 0.5s;
 }
 
@@ -284,7 +283,6 @@ input:checked + .slider:before {
   width: 200px;
   text-align: right;
   font-weight: bold;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -305,7 +303,6 @@ input:checked + .slider:before {
 }
 
 .socials ul li a:hover {
-  -webkit-transform: translate(120px, 0);
   transform: translate(120px, 0);
 }
 
@@ -420,11 +417,8 @@ img {
   border: none;
   outline: none;
   border-radius: 50%;
-  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  -webkit-transition-property: background-color, color;
   transition-property: background-color, color;
   z-index: 1;
 }
@@ -435,40 +429,14 @@ img {
   color: var(--red);
 }
 
-@-webkit-keyframes btn-entrance {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @keyframes btn-entrance {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes btn-exit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
   }
 }
 
@@ -478,20 +446,17 @@ img {
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
 }
 
 @media screen and (max-width: 360px) {
-  header {
-    padding-bottom: 0;
-  }
   #nav .logo {
     font-size: 1rem;
   }
   .home {
     margin-bottom: 0;
+    margin-top: 50px;
     padding-bottom: 0;
   }
   #socials {
@@ -513,9 +478,14 @@ img {
     padding: 0;
     margin: 0 25px;
   }
-
+  h2 {
+    text-align: center;
+  }
   .projects-container {
     max-width: 90%;
+  }
+  .btns a {
+    padding: 10px 10px 10px 16px;
   }
 }
 
@@ -523,8 +493,16 @@ img {
   #hamburger-menu div {
     height: 2.7px;
   }
+  #nav .logo {
+    font-size: 1.5rem;
+  }
   .logo {
     font-size: 0.5rem;
+  }
+  .home {
+    margin-bottom: 0;
+    margin-top: 50px;
+    padding-bottom: 0;
   }
   .about {
     margin: 0 25px;
@@ -538,8 +516,14 @@ img {
     padding: 0;
     margin: 0 25px;
   }
+  h2 {
+    text-align: center;
+  }
   .projects-container {
     max-width: 90%;
+  }
+  .btns a {
+    padding: 10px 10px 10px 16px;
   }
 }
 
@@ -549,19 +533,10 @@ img {
     right: 0;
     height: 92vh;
     top: 8vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
   }
   .links li {
@@ -580,14 +555,12 @@ img {
 }
 
 .nav-active {
-  z-index: 1000;
-  -webkit-transform: translateX(0%);
+  z-index: 10000;
   transform: translateX(0%);
-  background: var(--dark-pink);
+  background-color: var(--dark-pink);
 }
 
 .toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
@@ -596,76 +569,34 @@ img {
 }
 
 .toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
   transform: rotate(45deg) translate(-5px, -6px);
-}
-
-@-webkit-keyframes linkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
 }
 
 @keyframes linkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
     transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes nav-links {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
   }
 }
 
 @keyframes nav-links {
   0% {
-    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes social-links {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
   }
 }
 
 @keyframes social-links {
   0% {
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
