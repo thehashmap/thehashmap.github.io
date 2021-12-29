@@ -9,8 +9,8 @@
 
 :root {
   --red: #db4437;
-  --dark-pink: #f53787;
-  --blue: #0077b5;
+  --dark-pink: #fd257f;
+  --blue: #009cf0;
   --gray: rgb(170, 170, 170);
   --dark-gray: #181a1b;
   --text-color: #fff;
@@ -21,8 +21,9 @@
 
 .light-mode {
   --gray: rgb(219, 219, 219);
-  --dark-gray: whitesmoke;
-  --text-color: #000;
+  --dark-gray: rgb(255, 255, 255);
+  --blue: #009cf0;
+  --text-color: rgb(22, 22, 22);
   --lighter-text: rgb(37, 37, 37);
   --card-background: #eeeeee;
   --skills-span: rgb(61, 61, 61);
@@ -278,7 +279,7 @@ input:checked + .slider:before {
 
 .socials ul li a {
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
   font-size: 1.2rem;
   padding: 1.2rem;
   display: block;
@@ -351,7 +352,7 @@ h4 {
   display: flex;
   margin: 2vw;
   justify-content: center;
-  background-color: white;
+  background-color: whitesmoke;
   border-radius: 10%;
   z-index: 1;
 }
