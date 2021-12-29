@@ -333,7 +333,7 @@ h2 {
 
 .skills {
   color: var(--text-color);
-  padding: 100px;
+  padding: 0 100px;
 }
 
 h4 {
@@ -381,7 +381,7 @@ img {
 }
 
 .projects {
-  padding: 100px;
+  padding: 0 100px;
 }
 
 .projects-container {
