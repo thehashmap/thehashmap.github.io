@@ -326,10 +326,9 @@ h2 {
 }
 
 .about .container-about .about-me p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--text-color);
-  font-weight: bolder;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .skills {
