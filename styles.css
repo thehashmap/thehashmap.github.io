@@ -56,6 +56,7 @@ header nav {
   min-height: 6vh;
   animation: nav-links 0.5s;
   background-color: var(--dark-gray);
+  padding: 5px;
 }
 
 header nav .logo {
@@ -329,6 +330,7 @@ h2 {
   font-size: 1.15rem;
   color: var(--text-color);
   line-height: 1.5;
+  padding-top: 30px;
 }
 
 .skills {
