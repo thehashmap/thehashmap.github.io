@@ -270,7 +270,7 @@ input:checked + .slider:before {
   z-index: 100;
   top: 65%;
   position: absolute;
-  left: -8.5rem;
+  left: -8rem;
   animation: social-links 0.5s;
 }
 
