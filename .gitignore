@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Compiled output
+.next/
+out/
+dist/
+
+# Environment files
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Log files
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS files
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Cache and build directories
+.cache/
+.next/
+out/
