@@ -13,9 +13,7 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <h2 className="text-3xl font-medium capitalize mb-8 text-center">
-        About Me
-      </h2>
+      <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla
