@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -12,8 +13,9 @@ export default function Project({
   tags,
   imageUrl,
 }: ProjectProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: "",
+    target: ref,
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
@@ -21,6 +23,7 @@ export default function Project({
 
   return (
     <motion.div
+      ref={ref}
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,
