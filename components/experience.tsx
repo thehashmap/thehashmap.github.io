@@ -16,7 +16,7 @@ export default function Experience() {
       <VerticalTimeline>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
-            <VerticalTimelineElement>
+            <VerticalTimelineElement visible={true}>
               <h3>{item.title}</h3>
               <p>{item.location}</p>
               <p>{item.description}</p>
