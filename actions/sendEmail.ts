@@ -6,13 +6,11 @@ import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const emailId = process.env.EMAIL;
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
-
-  console.log(senderEmail);
-  console.log(message);
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -28,10 +26,9 @@ export const sendEmail = async (formData: FormData) => {
 
   let data;
   try {
-    console.log("trying resend");
     data = await resend.emails.send({
       from: "Contact form <onboarding@resend.dev>",
-      to: ["nkmnikhil0009@gmail.com"],
+      to: emailId ? [emailId] : ["hemlocheems@doggomail.com"],
       subject: "Message from contact form",
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
@@ -39,7 +36,6 @@ export const sendEmail = async (formData: FormData) => {
         senderEmail: senderEmail,
       }),
     });
-    console.log("data: ", data);
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
