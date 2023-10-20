@@ -1,0 +1,37 @@
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
+
+function TypingText() {
+  const typingRef = useRef();
+
+  useEffect(() => {
+    const options = {
+      strings: [
+        "Software Developer",
+        "IITian",
+        "Problem Solver",
+        "Tech Enthusiast",
+        "Sports fanatic",
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 500,
+      startDelay: 1000,
+      loop: true,
+    };
+
+    const typed = new Typed(typingRef.current, options);
+
+    return () => {
+      typed.destroy(); // Cleanup to prevent memory leaks
+    };
+  }, []);
+
+  return (
+    <span>
+      <span className="animate" ref={typingRef}></span>
+    </span>
+  );
+}
+
+export default TypingText;
