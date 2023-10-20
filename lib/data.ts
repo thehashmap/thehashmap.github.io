@@ -1,8 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import nextsvg from "@/public/next.svg";
+import krypt from "@/public/Krypt.png";
 
 export const links = [
   {
@@ -33,90 +33,81 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Lorem Ipsum",
-    location: "Lorem Ipsum",
+    title: "Indian Institute Of Technology (BHU) Varanasi",
+    location: "Varanasi, India",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu urna id nisi tincidunt accumsan. Integer tincidunt, justo nec cursus feugiat, lorem dolor pellentesque tortor, non malesuada risus metus sit amet urna.",
+      "Bachelor’s and Master’s of Technology (Integrated Dual Degree)\nCPI - 8.86",
     icon: React.createElement(LuGraduationCap),
-    date: "Lorem Ipsum",
+    date: "2019 – 2024",
   },
   {
-    title: "Lorem Ipsum",
-    location: "Lorem Ipsum",
+    title: "Ethan AI",
+    location: "Remote - Singapore",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu urna id nisi tincidunt accumsan. Integer tincidunt, justo nec cursus feugiat, lorem dolor pellentesque tortor, non malesuada risus metus sit amet urna.",
+      "Software Developer                                                                                                                      ",
     icon: React.createElement(CgWorkAlt),
-    date: "Lorem Ipsum - Lorem Ipsum",
+    date: "February – March 2022",
   },
   {
-    title: "Lorem Ipsum",
-    location: "Lorem Ipsum",
+    title: "Blexings",
+    location: "Remote - India",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu urna id nisi tincidunt accumsan. Integer tincidunt, justo nec cursus feugiat, lorem dolor pellentesque tortor, non malesuada risus metus sit amet urna.",
-    icon: React.createElement(FaReact),
-    date: "Lorem Ipsum - Lorem Ipsum",
+      "Frontend and Blockchain Developer                                                                                                                      ",
+    icon: React.createElement(CgWorkAlt),
+    date: "April – July 2022",
+  },
+  {
+    title: "DoDAO",
+    location: "Remote - Canada",
+    description:
+      "Full Stack Developer | Content Writer                                                                                                                      ",
+    icon: React.createElement(CgWorkAlt),
+    date: "July 2022 – Present",
+  },
+  {
+    title: "Standard Chartered GBS",
+    location: "Chennai - India",
+    description:
+      "Software Developer                                                                                                                      ",
+    icon: React.createElement(CgWorkAlt),
+    date: "May – July 2023",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "Lorem Ipsum",
+    title: "Krypt",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu urna id nisi tincidunt accumsan. Integer tincidunt, justo nec cursus feugiat, lorem dolor pellentesque tortor, non malesuada risus metus sit amet urna.",
-    tags: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ],
-    imageUrl: nextsvg,
+      "Web 3.0 Blockchain Application. Send and receive Ethereum cryptocurrency using Metamask wallet. Built and deployed Ethereum smart contracts.",
+    tags: ["React", "Solidity", "Tailwind"],
+    imageUrl: krypt,
   },
   {
-    title: "Lorem Ipsum",
+    title: "Goaly",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu urna id nisi tincidunt accumsan. Integer tincidunt, justo nec cursus feugiat, lorem dolor pellentesque tortor, non malesuada risus metus sit amet urna.",
-    tags: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ],
-    imageUrl: nextsvg,
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu urna id nisi tincidunt accumsan. Integer tincidunt, justo nec cursus feugiat, lorem dolor pellentesque tortor, non malesuada risus metus sit amet urna.",
-    tags: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ],
+      "Created a goal-setting web application using MERN stack. Created Express server with API endpoints to perform CRUD operations and utilized MongoDB to store user information.",
+    tags: ["MongoDB", "React", "Express", "Node"],
     imageUrl: nextsvg,
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "React",
+  "Next",
+  "React Native",
   "JavaScript",
   "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
   "Prisma",
   "MongoDB",
   "Redux",
   "GraphQL",
-  "Apollo",
+  "Node",
   "Express",
   "PostgreSQL",
   "Python",
-  "Framer Motion",
+  "Solidity",
+  "HTML",
+  "CSS",
+  "Tailwind",
+  "Git",
 ] as const;

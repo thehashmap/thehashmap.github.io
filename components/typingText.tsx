@@ -29,7 +29,10 @@ function TypingText() {
 
   return (
     <span>
-      <span className="animate" ref={typingRef}></span>
+      <span
+        className="animate text-gray-500 dark:text-gray-400"
+        ref={typingRef}
+      ></span>
     </span>
   );
 }

@@ -12,7 +12,7 @@ export default function SectionDivider() {
       transition={{ delay: 0.125 }}
     >
       <a href="#about">
-        <div className="w-[35px] h-[64px] rounded-3xl border-4 border-gray-200 flex justify-center items-start p-2">
+        <div className="w-[35px] h-[64px] rounded-3xl border-4 border-gray-400 flex justify-center items-start p-2">
           <motion.div
             animate={{
               y: [0, 24, 0],
@@ -22,7 +22,7 @@ export default function SectionDivider() {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="w-3 h-3 rounded-full bg-gray-200 mb-1"
+            className="w-3 h-3 rounded-full bg-gray-400 mb-1"
           />
         </div>
       </a>
