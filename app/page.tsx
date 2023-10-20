@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import Calendar from "@/components/calendar";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Intro from "@/components/intro";
@@ -12,8 +13,9 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
-      <Skills />
       <Experience />
+      <Skills />
+      <Calendar />
       <Projects />
       <Contact />
     </main>
