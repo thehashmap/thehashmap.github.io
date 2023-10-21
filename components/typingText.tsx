@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, RefObject } from "react";
 import Typed from "typed.js";
 
 function TypingText() {
-  const typingRef = useRef();
+  const typingRef: RefObject<HTMLSpanElement> = useRef(null);
 
   useEffect(() => {
     const options = {
