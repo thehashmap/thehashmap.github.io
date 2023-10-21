@@ -1,7 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import nextsvg from "@/public/next.svg";
+import nextsvg from "@/public/nextjs.jpg";
 import krypt from "@/public/Krypt.png";
 
 export const links = [
