@@ -6,13 +6,7 @@ function TypingText() {
 
   useEffect(() => {
     const options = {
-      strings: [
-        "Software Developer",
-        "IITian",
-        "Problem Solver",
-        "Tech Enthusiast",
-        "Sports fanatic",
-      ],
+      strings: ["Software Developer", "IITian", "Sports fanatic"],
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 500,
