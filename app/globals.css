@@ -13,3 +13,11 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+.typed-cursor {
+    color: rgb(107, 114, 128);
+}
+
+.typed-cursor:dark {
+    color: rgba(156, 163, 175);
+}
