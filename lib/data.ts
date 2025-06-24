@@ -62,7 +62,7 @@ export const experiencesData = [
     description:
       "Full Stack Developer | Content Writer                                                                                                                      ",
     icon: React.createElement(CgWorkAlt),
-    date: "July 2022 – Present",
+    date: "July 2022 – Jan 2024",
   },
   {
     title: "Standard Chartered GBS",
@@ -71,6 +71,14 @@ export const experiencesData = [
       "Software Developer                                                                                                                      ",
     icon: React.createElement(CgWorkAlt),
     date: "May – July 2023",
+  },
+  {
+    title: "Standard Chartered GBS",
+    location: "Bengaluru - India",
+    description:
+      "Software Developer                                                                                                                      ",
+    icon: React.createElement(CgWorkAlt),
+    date: "Aug 2024 – Present",
   },
 ] as const;
 
