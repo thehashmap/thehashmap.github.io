@@ -32,37 +32,18 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
+  
+  
+  
+  
+  
   {
-    title: "Indian Institute Of Technology (BHU) Varanasi",
-    location: "Varanasi, India",
-    description:
-      "Bachelor’s and Master’s of Technology (Integrated Dual Degree)\nCPI - 8.86",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019 – 2024",
-  },
-  {
-    title: "Ethan AI",
-    location: "Remote - Singapore",
+    title: "Standard Chartered GBS",
+    location: "Bengaluru - India",
     description:
       "Software Developer                                                                                                                      ",
     icon: React.createElement(CgWorkAlt),
-    date: "February – March 2022",
-  },
-  {
-    title: "Blexings",
-    location: "Remote - India",
-    description:
-      "Frontend and Blockchain Developer                                                                                                                      ",
-    icon: React.createElement(CgWorkAlt),
-    date: "April – July 2022",
-  },
-  {
-    title: "DoDAO",
-    location: "Remote - Canada",
-    description:
-      "Full Stack Developer | Content Writer                                                                                                                      ",
-    icon: React.createElement(CgWorkAlt),
-    date: "July 2022 – Jan 2024",
+    date: "Aug 2024 – Present",
   },
   {
     title: "Standard Chartered GBS",
@@ -73,13 +54,41 @@ export const experiencesData = [
     date: "May – July 2023",
   },
   {
-    title: "Standard Chartered GBS",
-    location: "Bengaluru - India",
+    title: "DoDAO",
+    location: "Remote - Canada",
+    description:
+      "Full Stack Developer | Content Writer                                                                                                                      ",
+    icon: React.createElement(CgWorkAlt),
+    date: "July 2022 – Jan 2024",
+  },
+  {
+    title: "Blexings",
+    location: "Remote - India",
+    description:
+      "Frontend and Blockchain Developer                                                                                                                      ",
+    icon: React.createElement(CgWorkAlt),
+    date: "April – July 2022",
+  },
+  {
+    title: "Ethan AI",
+    location: "Remote - Singapore",
     description:
       "Software Developer                                                                                                                      ",
     icon: React.createElement(CgWorkAlt),
-    date: "Aug 2024 – Present",
+    date: "February – March 2022",
   },
+  {
+    title: "Indian Institute Of Technology (BHU) Varanasi",
+    location: "Varanasi, India",
+    description:
+      "Bachelor’s and Master’s of Technology (Integrated Dual Degree)\nCPI - 8.86",
+    icon: React.createElement(LuGraduationCap),
+    date: "2019 – 2024",
+  },
+  
+  
+  
+  
 ] as const;
 
 export const projectsData = [
