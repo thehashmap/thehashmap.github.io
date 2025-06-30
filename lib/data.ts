@@ -109,6 +109,8 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  "Java",
+  "SpringBoot",
   "React",
   "Next",
   "React Native",
@@ -122,6 +124,7 @@ export const skillsData = [
   "Express",
   "PostgreSQL",
   "Python",
+  "C++",
   "Solidity",
   "HTML",
   "CSS",
